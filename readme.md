@@ -1,37 +1,66 @@
-ConsoleApp
+FastImageProcessingConsoleApp
 ==========
 
-This is a solution (project) file of Win32 Console Application for multiple version of Visual Studio.
-This solution is compatible with Visual Studio 2010, 2012, 2013, 2015, 2017 and 2019.
-In this solution, you do NOT need to change settings "PlatformToolset" and "WindowsTargetPlatformVersion".
+## 概要
 
-## Description
+巨大な画像を最近傍のリサンプリングにより縮小する速度をCとPythonで比較する．
 
-This solution file is provided for beginners at programming.
-When they use a different version of Visual Studio at school or at home, settings of the corresponding toolset are required.
-In this solution, "PlatformToolset" and "WindowsTargetPlatformVersion" macros (environment variables) are set automatically from Windows Registry and "VisualStudioVersion" macro. 
-Therefore, they do NOT need to change these settings.
+以下の入力画像を1/10に縮小する速度を計測する．
+
+### 入力画像
+
+`pexels-asad-photo-maldives-1591373.jpg`
+7360 x 4912 px
 
 
-## Requirement
+### 出力画像：
+
+* `output.jpg` C による出力
+* `py_output.jpg` Python による出力
+
+
+## 必要なもの
+
+### C code
 
 Visual Studio 2010 or later.
-If you use Visual Studio 2015 or later, you must install the Desktop application development tool with C++ (Windows 10 SDK).
 
 
-## Usage
+### Python code
 
-Open `ConsoleApp.sln`
+Python 3.x and PIL
 
 
-## Extra
+## 使い方
 
-For convenience, Makefile is included for Unix like OS environment (e.g. Linux and/or macOS) users.
+### C code
+
+`FastImageProcessingConsoleApp.sln` を開いてビルドして実行する．
+
+
+### Python code
+
+`resize.py` を実行する．
+
+
+## 実行時間例
+
+### 測定結果
+
+* C : 0.00145 [s]
+* Python :  0.656 [s]
+
+### 測定環境
+
+* Intel Core i7-9700 @ 3.00GHz
+* 16GB
+* Windows 10 21H1 (BUild 19043.1237)
 
 
 ## License
 
-These files are licensed under CC0.
+MIT License
+Copyright (c) 2021 Kensaku ASAHI
 
-[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed.en)
+
 
