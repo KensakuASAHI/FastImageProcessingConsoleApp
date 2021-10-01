@@ -51,19 +51,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-    """
-    out_img = Image.new("RGB", (out_width, out_hight), color=0)
-    for y in range(out_hight):
-        for x in range(out_width):
-            tmp2 = [0, 0, 0]
-            for j in range(0, 4):
-                tmp = [0, 0, 0]
-                for i in range(0, 4):
-                    pix_tmp = list(map(lambda x: x*h(i - 1), list(img.getpixel((x * 10 + i, y * 10 + j))))
-                    for k in range(3):
-                        tmp[k] += pix_tmp[k]
-                
-                tmp2 += tmp[j] * h(j - 1)
-            out_img.putpixel((x, y), tmp2)
-    """
